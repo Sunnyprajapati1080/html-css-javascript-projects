@@ -43,12 +43,13 @@ const songs = [
     { songName: "rim jhim", artist: "jubin nautiyal", imgpath: "images/cover/cover7.jpg", filepath: "songs/song7.mp3" },
     { songName: "tenu lehenga", artist: "neha kakkar", imgpath: "images/cover/cover8.jpg", filepath: "songs/song8.mp3" },
     { songName: "tera fitoor", artist: "unknown", imgpath: "images/cover/cover9.jpg", filepath: "songs/song9.mp3" },
-    { songName: "yaad piya ki aane lagi", artist: "neha kakkar", imgpath: "images/cover/cover10.jpg", filepath: "songs/song10.mp3" }
+    { songName: "yaad piya ki aane lagi", artist: "neha kakkar", imgpath: "images/cover/cover10.jpg", filepath: "songs/song10.mp3" },
+    { songName: "o meri heer ve", artist: "unknown", imgpath: "images/cover/cover11.jpg", filepath: "songs/song11.mp3" }
 ]
 
 let currentSong = 0;
 nextbtn.addEventListener("click", () => {
-    if (currentSong == 9) {
+    if (currentSong == 10) {
         currentSong = 0;
         songName.innerHTML = songs[currentSong].songName
         artist.innerHTML = songs[currentSong].artist
@@ -70,7 +71,7 @@ nextbtn.addEventListener("click", () => {
 })
 prevbtn.addEventListener("click", () => {
     if (currentSong <= 0) {
-        currentSong = 9;
+        currentSong = 10;
         songName.innerHTML = songs[currentSong].songName
         artist.innerHTML = songs[currentSong].artist
         img.setAttribute("src", songs[currentSong].imgpath)
@@ -100,7 +101,7 @@ autoplayBtn.addEventListener("click", () => {
     }
 })
 song.addEventListener("ended", () => {
-    if (autoplay == true && currentSong == 9) {
+    if (autoplay == true && currentSong == 10) {
         currentSong = 0;
         songName.innerHTML = songs[currentSong].songName
         artist.innerHTML = songs[currentSong].artist
