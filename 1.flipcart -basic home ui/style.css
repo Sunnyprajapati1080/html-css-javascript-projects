@@ -1,0 +1,232 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+::-webkit-scrollbar{
+    background: transparent;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    width: 7px;
+    background: rgb(66, 66, 66);
+    border-radius: 10px;
+}
+body{
+    background: rgb(238, 238, 238);
+}
+nav{
+    background-color: rgb(60, 161, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.card-item > p:nth-child(3){
+    color: green;
+}
+.card-item > p:nth-child(2){
+    font-weight: 500;
+}
+nav *{
+    margin:10px;
+}
+.brand{
+    margin: 0;
+    color: yellow;
+    font-size: 30px;
+    transform: skewX(-6deg);
+    font-weight: 500;
+    cursor: pointer;
+}
+ul{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+ul li:hover{
+    color: rgb(48, 48, 48);
+    cursor: pointer;
+    font-weight: bold;
+}
+nav input[type="text"]{
+    width: 40vw;
+    padding: 10px;
+    margin: 0px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: #effffe;
+    font-size: 15px;
+}
+nav input::placeholder{
+    color: rgb(5, 5, 5);
+    font-size: 15px;
+}
+button{
+    margin: 0;
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    color:rgb(255, 255, 255);
+    background-color: rgb(77, 76, 76);
+    cursor: pointer;
+}
+.slider{
+    width: 70vw;
+    height: 35vw;
+    margin:10px auto;
+    display: grid;
+    box-shadow: 0px 0px 10px 0.2px rgba(0, 0, 0, 0.418);
+    overflow: hidden;
+    grid-template-columns: 100% 100% 100% 100%;
+}
+.slider img{
+    animation: slide 10s ease-in-out infinite 1s forwards;
+    width: 100%;
+}
+@keyframes slide {
+    0%{
+        transform: translate(0%);
+    }
+    10%{
+        transform: translate(-100%);
+    }
+    25%{
+        transform: translate(-100%);
+    }
+    35%{
+        transform: translate(-200%);
+    }
+    50%{
+        transform: translate(-200%);
+    }
+    60%{
+        transform: translate(-300%);
+    }
+    75%{
+        transform: translate(-300%);
+    }
+    85%{
+        transform: translate(0%);
+    }
+    100%{
+        transform: translate(0%);
+    }
+}
+
+footer{
+    background-color: rgb(55, 158, 255);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+h2{
+    padding:10px 0px 0px 10px;
+}
+hr{
+    margin-top: 10px;
+    opacity: 0.3;
+}
+.card{
+    width: 93vw;
+    margin: 20px auto;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+.card-item{
+    padding:0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-item img{
+    width:200px;
+}
+.items{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 98%;
+}
+@media screen and (max-width:963px) {
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .brand{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:716px) {
+    .slider{
+        height: 50vw;
+        width: 85vw;
+    }
+}
+@media screen and (max-width:382px) {
+    footer p{
+        font-size: 14px;
+    }
+}
+.card .container{
+    display:flex;
+    justify-content: space-between;
+}
+.card .container button{
+    cursor: pointer;
+    width: 90px;
+    background-color: rgb(34, 34, 34);
+    margin: 13px 13px 0px 0px;
+    color: rgb(255, 255, 255);
+}
+.back{
+    width:45px;
+    height:85px;
+    background: rgb(255, 255, 255) url(images/left.svg) no-repeat center;
+    background-size: 37px 37px;
+    box-shadow: 2px 0px 10px 0.5px rgba(0, 0, 0, 0.418);
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+}
+.next{
+    box-shadow: -2px 0px 10px 0.5px rgba(0, 0, 0, 0.418);
+    width:45px;
+    height:85px;
+    background: rgb(255, 255, 255) url(images/right.svg) no-repeat center;
+    background-size: 37px 37px;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    cursor: pointer;
+}
+@media screen and (max-width:768px) {
+    .back,.next{
+        display: none;
+    }
+     .items{
+         overflow: scroll;
+     }
+     ::-webkit-scrollbar-thumb{
+         display:none;
+     }
+}

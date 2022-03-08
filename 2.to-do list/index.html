@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MyTodo - the best time management tool for you</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>MyTodo</h1>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" placeholder="Add Your Title Here" class="title">
+            <label for="description">Description</label>
+            <textarea type="text" name="description" id="description" placeholder="Add Your Description Here"
+                class="description"></textarea>
+            <div class="btn_container">
+                <button id="add_btn">Add To List</button>
+                <button id="clear_btn">Clear List</button>
+            </div>
+            <div class="table">
+                <div class="head">
+                    <h2>your items</h2>
+                    <input type="text" id="search" placeholder="search items...">
+                </div>
+                <hr>
+                <div class="thead">
+                    <p class="head">Index</p>
+                    <p class="head">Title</p>
+                    <p class="head">Description</p>
+                    <p class="head">Action</p>
+                </div>
+                <hr>
+                <div class="tbody">
+                </div>
+                <div class="msg">no items to display</div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
